@@ -1,0 +1,50 @@
+.form1-container{
+    margin: 4rem 1rem;
+    color: #2a2a2a;
+}
+
+.form1-container form{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    width: 90%;
+    margin: auto;
+}
+
+.form1-container input{
+    width: 30%;
+    height: 3rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #2a2a2a;
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-field button{
+    flex-basis: 25%;
+}
+
+@media screen and (max-width: 850px){
+     .form1-container{
+        padding-top: 1rem;
+        display:block;
+        flex-direction: column;
+        margin: 4rem 2rem;
+     }
+     .form1-container form{
+        padding-top: 2rem;
+        width: auto;
+     }
+     .btn-field button{
+        display: inline;
+    }
+}
+    
