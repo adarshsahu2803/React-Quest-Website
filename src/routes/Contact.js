@@ -1,6 +1,5 @@
 import Hero from "../components/Hero"
 import AboutImg from "../assets/2.jpg"
-import Footer from "../components/Footer";
 
 function Contact (){
     return(
@@ -11,7 +10,6 @@ function Contact (){
             title="Contact"
             btnClass="hide"
         />
-        <Footer/>
         </>
     );
 }

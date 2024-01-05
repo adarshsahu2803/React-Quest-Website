@@ -6,7 +6,6 @@ import Trip from "../components/Trip";
 function Home (){
     return(
         <>
-        
         <Hero
             cName="hero"
             heroImg={HomeImg}

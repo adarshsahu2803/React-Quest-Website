@@ -1,4 +1,4 @@
-import "./OptimalDestFormStyles.css"
+import "../css/OptimalDestFormStyles.css"
 
 function OptimalDestForm(){
     return(

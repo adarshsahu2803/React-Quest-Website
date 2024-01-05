@@ -3,7 +3,7 @@ import Mountain2 from "../assets/2.jpg"
 import Mountain3 from "../assets/5.jpg"
 import Mountain4 from "../assets/8.jpg"
 import DestinationData from "./DestinationData"
-import "./DestinationStyles.css"
+import "../css/DestinationStyles.css"
 
 const Destination = () => {
     return (
