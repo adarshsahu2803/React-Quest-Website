@@ -4,7 +4,10 @@ import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
-  state = {clicked:false};
+  state = {
+    clicked:false,
+  };
+
   handleClick = () =>{
     this.setState({clicked: !this.state.clicked})
   }
