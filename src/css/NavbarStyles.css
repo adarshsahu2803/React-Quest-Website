@@ -69,6 +69,25 @@ button:hover{
     color: #fff;
 }
 
+.signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #ffffff; /* Change the border properties as needed */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    color: #ffffff; /* Text color */
+    background-color: #222; /* Background color */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .signup-button:hover {
+    background-color: #01959a; /* Change color on hover */
+    cursor: pointer;
+  }
+
 .menu-icons{
     display: none;
 }
@@ -118,7 +137,7 @@ button:hover{
         display: none;
     }
 
-    .nav-links-mobile{
+    .signup-button{
         display: block;
         text-align: center;
         padding: 1.5rem;
