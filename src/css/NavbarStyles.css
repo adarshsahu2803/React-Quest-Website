@@ -18,7 +18,8 @@
 .navbar-logo{
     color: #222;
     font-size: 2rem;
-
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-menu{

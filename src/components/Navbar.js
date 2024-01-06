@@ -6,18 +6,18 @@ import { Link } from "react-router-dom";
 class Navbar extends Component {
   state = {
     clicked: false,
-    isSignupVisible: false
   };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked })
-    this.setState({ isSignupVisible: false })
   }
 
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 className="navbar-logo">Quest</h1>
+        <div>
+          <Link className="navbar-logo" to={"/"}>Quest</Link>
+        </div>
 
         <div className="menu-icons" onClick={this.handleClick}>
           <i className={this.state.clicked ? "fas fa-times"
@@ -35,11 +35,6 @@ class Navbar extends Component {
               </li>
             )
           })}
-          {/* <li>
-            <Link className="signup-button" to="/signup">
-              Sign Up
-            </Link>
-          </li> */}
         </ul>
       </nav>
     );
