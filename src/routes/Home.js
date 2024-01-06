@@ -12,7 +12,7 @@ function Home (){
             title="Your Journey Your Story"
             text="Choose Your Favourite Destination."
             buttonText="Travel Plan"
-            url="/optimalDest"
+            url="/dest"
             btnClass="show"
         />
         <Destination/>

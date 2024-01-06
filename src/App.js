@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/service" element={<Service/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/signup" element={<Signup/>}/>
-        <Route path="/optimalDest" element={<OptimalDest />} />
+        <Route path="/dest" element={<OptimalDest />} />
       </Routes>
       <Footer />
     </div>
