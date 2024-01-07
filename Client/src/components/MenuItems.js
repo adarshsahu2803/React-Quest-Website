@@ -24,8 +24,8 @@ export const MenuItems = [
         icon : "fa-solid fa-address-book"
     },
     {
-        title : "Register", 
-        url : "/register",
+        title : "Signup", 
+        url : "/signup",
         cName : "register-button"
     },
   ];

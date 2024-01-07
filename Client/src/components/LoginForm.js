@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import '../css/Login.css';
+import '../css/LoginForm.css';
 import signinImg from '../assets/signin-image.jpg';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -29,9 +29,12 @@ const Login = () => {
         <div className='main-div'>
             <div className='container-img'>
                 <img src={signinImg} alt='signin-img' />
+                <div className="login-register">
+                    <p>Don't have an account? <Link to="/signup">Signup</Link></p>
+                </div>
             </div>
+
             <div className="container">
-                <div className="title">Login</div>
                 <div className="content">
                     <form action="/login" method="POST">
                         <div className="user-details-1">
@@ -49,13 +52,10 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-                <div className="login-register">
-                    <p>Not a user? <Link to="/register">Register</Link></p>
-                </div>
             </div>
         </div>
 
     );
 };
 
-export default Login;
+export default LoginForm;
