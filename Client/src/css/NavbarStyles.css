@@ -70,7 +70,7 @@ button:hover{
     color: #fff;
 }
 
-.signup-button {
+.register-button {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
@@ -84,7 +84,7 @@ button:hover{
     transition: background-color 0.3s ease; /* Smooth transition */
   }
   
-  .signup-button:hover {
+  .register-button:hover {
     background-color: #01959a; /* Change color on hover */
     cursor: pointer;
   }
@@ -138,7 +138,7 @@ button:hover{
         display: none;
     }
 
-    .signup-button{
+    .register-button{
         display: block;
         text-align: center;
         padding: 1.5rem;

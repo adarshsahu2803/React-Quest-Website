@@ -5,7 +5,7 @@ import About from "./routes/About";
 import Service from "./routes/Service";
 import Contact from "./routes/Contact";
 import OptimalDest from "./routes/OptimalDest";
-import Signup from "./routes/Signup";
+import Register from "./routes/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/service" element={<Service/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/register" element={<Register/>}/>
         <Route path="/dest" element={<OptimalDest />} />
       </Routes>
       <Footer />
