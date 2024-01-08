@@ -26,32 +26,30 @@ const LoginForm = () => {
     };
 
     return (
-        <div className='main-div'>
-            <div className='container-img'>
+        <div className='main-div1'>
+            <div className='container-img1'>
                 <img src={signinImg} alt='signin-img' />
                 <div className="login-register">
                     <p>Don't have an account? <Link to="/signup">Signup</Link></p>
                 </div>
             </div>
 
-            <div className="container">
-                <div className="content">
-                    <form action="/login" method="POST">
-                        <div className="user-details-1">
-                            <div className="input-box">
-                                <span className="details">Username</span>
-                                <input type="text" placeholder="Enter your username" name="userName" required />
-                            </div>
-                            <div className="input-box">
-                                <span className="details">Password</span>
-                                <input type="text" placeholder="Enter your password" name="password" required />
-                            </div>
+            <div className="content1">
+                <form action="/login" method="POST">
+                    <div className="user-details-1">
+                        <div className="input-box1">
+                            <span className="details1">Username</span>
+                            <input type="text" placeholder="Enter your username" name="userName" required />
                         </div>
-                        <div className="button">
-                            <input type="submit" value="Login" />
+                        <div className="input-box1">
+                            <span className="details1">Password</span>
+                            <input type="text" placeholder="Enter your password" name="password" required />
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div className="button1">
+                        <input type="submit" value="Login" />
+                    </div>
+                </form>
             </div>
         </div>
 
