@@ -4,39 +4,22 @@ import signinImg from '../assets/signin-image.jpg';
 import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [formLoginData, setFormLoginData] = useState({
+        userName: '',
+        password: '',
+    });
 
-    const handleUsernameChange = (e) => {
-        setUsername(e.target.value);
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormLoginData({
+            ...formLoginData,
+            [name]: value,
+        });
     };
 
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const handleLogin = async () => {
-        try {
-            // Make an API call to authenticate the user
-            const response = await fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
-
-            if (response.ok) {
-                // User successfully logged in
-                console.log('Logged in successfully');
-                // You may redirect the user or perform other actions upon successful login
-            } else {
-                // Handle login failure
-                console.log('Login failed');
-            }
-        } catch (error) {
-            console.error('Error occurred during login:', error);
-        }
+    const handleLogin = (e) => {
+        e.preventDefault();
+        console.log(formLoginData);
     };
 
     return (
@@ -49,7 +32,7 @@ const LoginForm = () => {
             </div>
 
             <div className="content1">
-                <form action="/login" method="POST" onSubmit={handleLogin}>
+                <form onSubmit={handleLogin}>
                     <div className="user-details-1">
                         <div className="input-box1">
                             <span className="details1">Username</span>
@@ -57,8 +40,8 @@ const LoginForm = () => {
                                 type="text"
                                 placeholder="Enter your username"
                                 name="userName"
-                                value={username}
-                                onChange={handleUsernameChange}
+                                value={formLoginData.username}
+                                onChange={handleInputChange}
                                 required />
                         </div>
                         <div className="input-box1">
@@ -67,8 +50,8 @@ const LoginForm = () => {
                                 type="password"
                                 placeholder="Enter your password"
                                 name="password"
-                                value={password}
-                                onChange={handlePasswordChange}
+                                value={formLoginData.password}
+                                onChange={handleInputChange}
                                 required
                             />
                         </div>
