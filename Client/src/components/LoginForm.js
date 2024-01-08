@@ -15,14 +15,28 @@ const LoginForm = () => {
         setPassword(e.target.value);
     };
 
-    const handleLogin = () => {
-        // Implement login functionality here
-        console.log('Logging in with:', username, password);
-    };
+    const handleLogin = async () => {
+        try {
+            // Make an API call to authenticate the user
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
 
-    const handleRegister = () => {
-        // Implement register functionality here or redirect to registration page
-        console.log('Redirecting to registration page');
+            if (response.ok) {
+                // User successfully logged in
+                console.log('Logged in successfully');
+                // You may redirect the user or perform other actions upon successful login
+            } else {
+                // Handle login failure
+                console.log('Login failed');
+            }
+        } catch (error) {
+            console.error('Error occurred during login:', error);
+        }
     };
 
     return (
@@ -35,15 +49,28 @@ const LoginForm = () => {
             </div>
 
             <div className="content1">
-                <form action="/login" method="POST">
+                <form action="/login" method="POST" onSubmit={handleLogin}>
                     <div className="user-details-1">
                         <div className="input-box1">
                             <span className="details1">Username</span>
-                            <input type="text" placeholder="Enter your username" name="userName" required />
+                            <input
+                                type="text"
+                                placeholder="Enter your username"
+                                name="userName"
+                                value={username}
+                                onChange={handleUsernameChange}
+                                required />
                         </div>
                         <div className="input-box1">
                             <span className="details1">Password</span>
-                            <input type="text" placeholder="Enter your password" name="password" required />
+                            <input
+                                type="password"
+                                placeholder="Enter your password"
+                                name="password"
+                                value={password}
+                                onChange={handlePasswordChange}
+                                required
+                            />
                         </div>
                     </div>
                     <div className="button1">

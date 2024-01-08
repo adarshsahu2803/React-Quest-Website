@@ -4,11 +4,17 @@ import signupImg from '../assets/signup-image.jpg';
 import { Link } from 'react-router-dom';
 
 const SignupForm = () => {
+
+    const handleRegister = () => {
+        // Implement register functionality here or redirect to registration page
+        console.log('Redirecting to registration page');
+    };
+
     return (
         <div className='main-div'>
             <div className="container">
                 <div className="content">
-                    <form action="/register" method="POST">
+                    <form action="/register" method="POST"  onSubmit={handleRegister}>
                         <div className="user-details">
                             <div className="input-box">
                                 <span className="details">Full Name</span>
