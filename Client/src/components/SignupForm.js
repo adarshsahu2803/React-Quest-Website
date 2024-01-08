@@ -22,9 +22,29 @@ const SignupForm = () => {
         });
     };
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
         console.log(formData);
+
+        try {
+            const response = await fetch('/register', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                console.log('Logged in successfully');
+            } else {
+                console.log('Login failed');
+            }
+
+            console.log(response)
+        } catch (error) {
+            console.error('Error occurred during login:', error);
+        }
     };
 
     return (

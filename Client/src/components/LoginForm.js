@@ -17,9 +17,29 @@ const LoginForm = () => {
         });
     };
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
         console.log(formLoginData);
+
+        try {
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formLoginData),
+            });
+
+            if (response.ok) {
+                console.log('Logged in successfully');
+            } else {
+                console.log('Login failed');
+            }
+
+            console.log(response);
+        } catch (error) {
+            console.error('Error occurred during login:', error);
+        }
     };
 
     return (
