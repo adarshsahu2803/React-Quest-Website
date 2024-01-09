@@ -1,10 +1,8 @@
 require('dotenv').config();
 const express = require('express')
-// const connectDB = require("./db/connect");
 const app = express()
-const Register = require('./models/registers');
+// const Register = require('./models/registers');
 const mongoose = require('mongoose');
-
 const cors = require('cors');
 app.use(cors());
 
@@ -13,35 +11,14 @@ const port = process.env.PORT || 5000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-
-const middleware = (req, res, next) => {
-    console.log(`my middleware`);
-    next();
-}
-
-app.listen(process.env.PORT || port, () => {
-    console.log(`Node API app is running on port ${port}`)
-})
-
-mongoose.connect("mongodb+srv://adarshsahu1077:adarshsahu@cluster0.uumvrc1.mongodb.net/db1", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log('MongoDB connected');
+        app.listen(process.env.PORT || port, () => {
+            console.log(`Node API app is running on port ${port}`)
+        })
     })
     .catch(err => console.error('MongoDB connection error:', err));
-
-// const start = async () => {
-//     try {
-//         await connectDB();
-//         app.listen(PORT, () => {
-//             console.log(`Connected to ${PORT}`);
-//         })
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
 
 app.get('/', (req, res) => {
     console.log("this is home page")
