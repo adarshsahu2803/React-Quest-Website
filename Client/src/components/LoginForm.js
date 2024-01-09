@@ -22,7 +22,7 @@ const LoginForm = () => {
         console.log(formLoginData);
 
         try {
-            const response = await fetch('/login', {
+            const response = await fetch('http://localhost:5000/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,8 +31,10 @@ const LoginForm = () => {
             });
 
             if (response.ok) {
+                alert('Login successful.');
                 console.log('Logged in successfully');
             } else {
+                alert('Invalid credentials.');
                 console.log('Login failed');
             }
 
