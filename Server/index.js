@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express')
 const app = express()
-// const Register = require('./models/registers');
+const Signup = require('./models/signup');
 const mongoose = require('mongoose');
 const cors = require('cors');
 app.use(cors());
@@ -35,22 +35,31 @@ app.get('/signup', (req, res) => {
     res.send("this is signup page from server");
 });
 
-// app.get('/register', (req, res) => {
-//     res.render("register");
-// });
+app.post('/signup', async (req, res) => {
+    try {
+        const password = req.body.password
+        const cpassword = req.body.confirmPassword
 
-// app.post('/login', async (req, res) => {
-//     try {
-//         const { userName, password } = req.body;
-//         const user = await Register.findOne({ userName: userName, password: password });
+        if (password === cpassword) {
 
+            const userSignupData = new Signup({
+                fullName: req.body.fullName,
+                userName: req.body.userName,
+                email: req.body.email,
+                phone: req.body.phone,
+                password: password,
+                confirmPassword: cpassword,
+                gender: req.body.gender,
+            })
 
-//         if (user) {
-//             res.render("home", { successMessage: "Logged in successfully!" });
-//         } else {
-//             res.render("index", { errorMessage: "Invalid username/password" });
-//         }
-//     } catch (error) {
-//         res.status(500).send(error.message);
-//     }
-// });
+            const signedup = await userSignupData.save()
+            res.status(201).json({ message: 'User registered successfully', user: savedUser });
+
+        } else {
+            res.send("Password are not matching!")
+        }
+    } catch (error) {
+        console.error('Error occurred during signup:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

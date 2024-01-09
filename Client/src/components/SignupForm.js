@@ -27,7 +27,7 @@ const SignupForm = () => {
         console.log(formData);
 
         try {
-            const response = await fetch('/register', {
+            const response = await fetch('http://localhost:5000/signup', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -36,14 +36,14 @@ const SignupForm = () => {
             });
 
             if (response.ok) {
-                console.log('Logged in successfully');
+                console.log('Signup in successfully');
             } else {
-                console.log('Login failed');
+                console.log('Signup failed');
             }
 
             console.log(response)
         } catch (error) {
-            console.error('Error occurred during login:', error);
+            console.error('Error occurred during signup:', error);
         }
     };
 
@@ -148,7 +148,7 @@ const SignupForm = () => {
                                 checked={formData.gender === 'Prefer not to say'}
                                 onChange={handleInputChange}
                             />
-                            <span class="gender-title">Gender</span>
+                            <span className="gender-title">Gender</span>
                             <div className="category">
                                 <label htmlFor="dot-1">
                                     <span className="dot one"></span>

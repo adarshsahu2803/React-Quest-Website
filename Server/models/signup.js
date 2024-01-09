@@ -38,6 +38,6 @@ const employeeSchema = mongoose.Schema(
     }
 )
 
-const Register = mongoose.model('Register', employeeSchema);
+const Signup = mongoose.model('Signup', employeeSchema);
 
-module.exports = Register;
+module.exports = Signup;
