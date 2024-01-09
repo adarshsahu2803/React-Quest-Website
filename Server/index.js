@@ -5,6 +5,7 @@ const Signup = require('./models/signup');
 const mongoose = require('mongoose');
 const cors = require('cors');
 app.use(cors());
+const bcrypt = require('bcrypt');
 
 const port = process.env.PORT || 5000;
 
@@ -69,11 +70,12 @@ app.post('/login', async (req, res) => {
 
     try {
         const user = await Signup.findOne({ userName });
+        console.log(user)
         if (!user) {
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 
-        const isPasswordValid = (password, user.password)? 1:0;
+        const isPasswordValid = (password === user.password)? 1:0;
 
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Invalid credentials' });
