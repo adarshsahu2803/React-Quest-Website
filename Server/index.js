@@ -53,7 +53,7 @@ app.post('/signup', async (req, res) => {
             })
 
             const signedup = await userSignupData.save()
-            res.status(201).json({ message: 'User registered successfully', user: savedUser });
+            res.status(201).json({ message: 'User registered successfully', user: signedup });
 
         } else {
             res.send("Password are not matching!")
