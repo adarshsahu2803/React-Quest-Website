@@ -36,8 +36,10 @@ const SignupForm = () => {
             });
 
             if (response.ok) {
+                alert('Signup successful.');
                 console.log('Signup in successfully');
             } else {
+                alert('Signup failed.');
                 console.log('Signup failed');
             }
 
