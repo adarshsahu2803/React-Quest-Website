@@ -5,7 +5,12 @@ const Signup = require('./models/signup');
 const mongoose = require('mongoose');
 const cors = require('cors');
 app.use(cors());
-const bcrypt = require('bcrypt');
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, "../Client/build")));
+app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../Client/build/index.html"));
+});
 
 const port = process.env.PORT || 5000;
 
