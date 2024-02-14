@@ -1,27 +1,9 @@
-<u><h1>Quest: Optimal Vacation Destination</h1></u>
-
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Configuration](#configuration)
-    - [Running the Application](#running-the-application)
-4. [Project Structure](#project-structure)
-5. [Backend](#backend)
-    - [Express Server](#express-server)
-    - [MongoDB Database](#mongodb-database)
-6. [Frontend](#frontend)
-    - [React Components](#react-components)
-    - [State Management](#state-management)
-7. [Authentication](#authentication)
-8. [Responsive Design](#responsive-design)
+# Quest: Optimal Vacation Destination
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6efbfe7-48e6-415c-b3db-1aaa775a0d5b/deploy-status)](https://app.netlify.com/sites/pokedex-adarsh/deploys)
 
 ## 1. Overview
 
-React Quest Website is a sophisticated web-based vacation recommendation system built on the MERN (MongoDB, Express.js, React.js, Node.js) stack. The project incorporates a cutting-edge decision tree optimization algorithm to provide users with accurate and personalized travel suggestions. This documentation aims to provide a comprehensive guide for developers, contributors, and users.
+React Quest Website is a sophisticated web-based vacation recommendation system built on the MERN (MongoDB, Express, React, NodeJS) stack. The project incorporates a cutting-edge decision tree optimization algorithm to provide users with accurate and personalized travel suggestions. This documentation aims to provide a comprehensive guide for developers, contributors, and users.
 
 ## 2. Features
 
