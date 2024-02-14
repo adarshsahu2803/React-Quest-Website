@@ -1,4 +1,5 @@
 # Quest: Optimal Vacation Destination
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6efbfe7-48e6-415c-b3db-1aaa775a0d5b/deploy-status)](https://app.netlify.com/sites/pokedex-adarsh/deploys)
 
 ## 1. Overview
 
