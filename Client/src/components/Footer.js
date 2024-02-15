@@ -9,17 +9,14 @@ const Footer = () =>{
                     <p>Choose your favourite destination.</p>
                 </div>
                 <div>
-                    <a href="/">
-                        <i className="fa-brands fa-facebook-square"></i>
+                    <a href="https://www.linkedin.com/in/adarshsahu/">
+                        <i className="fab fa-linkedin"></i>
                     </a>
-                    <a href="/">
+                    <a href="https://www.instagram.com/adarshsahu27/">
                         <i className="fa-brands fa-instagram-square"></i>
                     </a>
-                    <a href="/">
-                        <i className="fa-brands fa-behance-square"></i>
-                    </a>
-                    <a href="/">
-                        <i className="fa-brands fa-twitter-square"></i>
+                    <a href="https://github.com/adarshsahu2803">
+                        <i className="fa-brands fa-github-square"></i>
                     </a>
                 </div>
             </div>
