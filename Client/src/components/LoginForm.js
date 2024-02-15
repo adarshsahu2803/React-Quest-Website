@@ -48,9 +48,7 @@ const LoginForm = () => {
         <div className='main-div1'>
             <div className='container-img1'>
                 <img src={signinImg} alt='signin-img' />
-                <div className="login-register">
-                    <p>Don't have an account? <Link to="/signup">Signup</Link></p>
-                </div>
+                <p>Don't have an account? <Link to="/signup">Signup</Link></p>
             </div>
 
             <div className="content1">

@@ -52,9 +52,9 @@ const SignupForm = () => {
     return (
         <div className='main-div'>
             <div className="container">
-                <div className="content">
-                    <form onSubmit={handleRegister}>
-                        <div className="user-details">
+                <form onSubmit={handleRegister}>
+                    <div className="user-details">
+                        <div className='col1'>
                             <div className="input-box">
                                 <span className="details">Full Name</span>
                                 <input
@@ -62,17 +62,6 @@ const SignupForm = () => {
                                     placeholder="Enter your name"
                                     name="fullName"
                                     value={formData.fullName}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                            <div className="input-box">
-                                <span className="details">Username</span>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your username"
-                                    name="userName"
-                                    value={formData.userName}
                                     onChange={handleInputChange}
                                     required
                                 />
@@ -89,23 +78,36 @@ const SignupForm = () => {
                                 />
                             </div>
                             <div className="input-box">
-                                <span className="details">Phone Number</span>
-                                <input
-                                    type="text"
-                                    placeholder="Enter your number"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </div>
-                            <div className="input-box">
                                 <span className="details">Password</span>
                                 <input
                                     type="text"
                                     placeholder="Enter your password"
                                     name="password"
                                     value={formData.password}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='col1'>
+                            <div className="input-box">
+                                <span className="details">Username</span>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your username"
+                                    name="userName"
+                                    value={formData.userName}
+                                    onChange={handleInputChange}
+                                    required
+                                />
+                            </div>
+                            <div className="input-box">
+                                <span className="details">Phone Number</span>
+                                <input
+                                    type="text"
+                                    placeholder="Enter your number"
+                                    name="phone"
+                                    value={formData.phone}
                                     onChange={handleInputChange}
                                     required
                                 />
@@ -122,61 +124,59 @@ const SignupForm = () => {
                                 />
                             </div>
                         </div>
-                        <div className="gender-details">
-                            <input
-                                className='gender-radio'
-                                type="radio"
-                                name="gender"
-                                id="dot-1"
-                                value="Male"
-                                checked={formData.gender === 'Male'}
-                                onChange={handleInputChange}
-                            />
-                            <input
-                                className='gender-radio'
-                                type="radio"
-                                name="gender"
-                                id="dot-2"
-                                value="Female"
-                                checked={formData.gender === 'Female'}
-                                onChange={handleInputChange}
-                            />
-                            <input
-                                className='gender-radio'
-                                type="radio"
-                                name="gender"
-                                id="dot-3"
-                                value="Prefer not to say"
-                                checked={formData.gender === 'Prefer not to say'}
-                                onChange={handleInputChange}
-                            />
-                            <span className="gender-title">Gender</span>
-                            <div className="category">
-                                <label htmlFor="dot-1">
-                                    <span className="dot one"></span>
-                                    <span className="gender">Male</span>
-                                </label>
-                                <label htmlFor="dot-2">
-                                    <span className="dot two"></span>
-                                    <span className="gender">Female</span>
-                                </label>
-                                <label htmlFor="dot-3">
-                                    <span className="dot three"></span>
-                                    <span className="gender">Prefer not to say</span>
-                                </label>
-                            </div>
+                    </div>
+                    <div className="gender-details">
+                        <input
+                            className='gender-radio'
+                            type="radio"
+                            name="gender"
+                            id="dot-1"
+                            value="Male"
+                            checked={formData.gender === 'Male'}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            className='gender-radio'
+                            type="radio"
+                            name="gender"
+                            id="dot-2"
+                            value="Female"
+                            checked={formData.gender === 'Female'}
+                            onChange={handleInputChange}
+                        />
+                        <input
+                            className='gender-radio'
+                            type="radio"
+                            name="gender"
+                            id="dot-3"
+                            value="Prefer not to say"
+                            checked={formData.gender === 'Prefer not to say'}
+                            onChange={handleInputChange}
+                        />
+                        <span className="gender-title">Gender</span>
+                        <div className="category">
+                            <label htmlFor="dot-1">
+                                <span className="dot one"></span>
+                                <span className="gender">Male</span>
+                            </label>
+                            <label htmlFor="dot-2">
+                                <span className="dot two"></span>
+                                <span className="gender">Female</span>
+                            </label>
+                            <label htmlFor="dot-3">
+                                <span className="dot three"></span>
+                                <span className="gender">Prefer not to say</span>
+                            </label>
                         </div>
-                        <div className="button">
-                            <input type="submit" value="Register" />
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div className="button">
+                        <input type="submit" value="Register" />
+                    </div>
+                </form>
             </div>
             <div className='container-img'>
                 <img src={signupImg} alt='signup-img' />
-                <div className="login-register">
-                    <p>Already have an account? <Link to="/login">Login</Link></p>
-                </div>
+                <p>Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </div>
     )

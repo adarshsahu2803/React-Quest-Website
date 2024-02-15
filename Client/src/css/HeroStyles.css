@@ -1,7 +1,7 @@
 .hero{
     width: 100%;
     height: 100vh;
-    position: relative;
+    /* position: relative; */
 }
 
 .hero-mid {
@@ -14,7 +14,7 @@
     padding-top: 4rem !important;
 }
 
-img{
+.heroImg{
     width: 100%;
     height: 100%;
     object-fit: cover;
